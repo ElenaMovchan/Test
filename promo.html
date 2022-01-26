@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Промокод</title>
+	</head>
+	<body>
+		<h1>Тестовое задание</h1>
+		<script type="text/javascript">
+			let number = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+			let randomPromoCode = [];
+			let promoCodeLength = 8;
+			while (randomPromoCode.length < promoCodeLength) {
+    		randomPromoCode += number[Math.floor(Math.random() *number.length)];
+    		}
+    		console.log("Промокод: " + randomPromoCode);
+			console.log(Array.from(''+randomPromoCode));
+			let arr = Array.from(''+ randomPromoCode);
+			let arrN = arr.map(Number);
+			console.log(arrN);
+
+		
+let result = arrN.filter(function(elem) {
+	if (elem % 2 == 0) {
+		return true;
+	} else {
+		return false;
+	}
+});
+console.log(result); //выборка четных
+
+function sum(result) {
+    return result.reduce(function(total, value) {
+        return total + value;
+    }, 0);
+};
+sum(result);
+console.log(sum(result)); // сумма четных
+
+let result2 = arrN.filter(function(elem) {
+	if (elem % 2 !== 0) {
+		return true;
+	} else {
+		return false;
+	}
+});
+console.log(result2); //фильтр нечетных
+
+result2.map(i=>x+=i, x=0).reverse()[0];
+console.log(x); //сумма нечетных
+
+let num1 = sum(result);
+let num2 = sum(result2);
+
+let newArr = [];
+for (let i = 0; i < arr.length; i ++) { if (arr[i]% 2 == 0) {arr[i] = 0} else {arr[i] =1}
+		newArr.push(arr[i])
+}
+console.log(newArr); // Массив из нулей и единиц для проверки
+
+let numb1 = arrN[0];
+let numb2 = arrN[1];
+let numb3 = arrN[2];
+let numb4 = arrN[3];
+let numb5 = arrN[4];
+let numb6 = arrN[5];
+let numb7 = arrN[6];
+let numb8 = arrN[7];
+if (numb1 % 2 !== 0 && numb2 % 2 !== 0  && numb3 % 2 == 0 && numb4 % 2 !== 0 && numb5 % 2 !==0) { if (numb1<numb2 && numb4<numb5) {console.log("Промокод 2000 грн");} else {
+console.log("Промокод 1000 грн");}
+}
+else if (numb2 % 2 !==0 && numb3 % 2 !==0 && numb4 % 2 ==0 &&numb5 % 2 !== 0 && numb6 % 2 !==0) { if (numb2<numb3 && numb5<numb6) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+else if (numb3 % 2 !==0 && numb4 % 2 !==0 && numb5 % 2 ==0 &&numb6 % 2 !== 0 && numb7 % 2 !==0) { if (numb3<numb4 && numb6<numb7) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+else if (numb4 % 2 !==0 && numb5 % 2 !==0 && numb6 % 2 ==0 &&numb7 % 2 !== 0 && numb8 % 2 !==0) { if (numb4<numb5 && numb7<numb8) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+else if (numb1 % 2 !==0 && numb2 % 2 !==0 && numb3 % 2 !==0 &&numb4 % 2 ==0 && numb5 % 2 !== 0 && numb6 % 2 !==0 && numb7 % 2 !==0) { if (numb1<numb2 && numb5<numb6) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+//Выбрана левая крайняя пара цифр для дальнейшей логики
+else if (numb2 % 2 !==0 && numb3 % 2 !==0 && numb4 % 2 !==0 &&numb5 % 2 ==0 && numb6 % 2 !== 0 && numb7 % 2 !==0 && numb8 % 2 !==0) { if (numb3<numb4 && numb7<numb8) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+//Выбрана правая крайняя пара цифр для дальнейшей логики
+else if (numb1 % 2 !==0 && numb2 % 2 !==0 && numb3 % 2 ==0 &&numb4 % 2 ==0 && numb5 % 2 ==0 && numb6 % 2 == 0 && numb7 % 2 !==0 && numb8 % 2 !==0) { if (numb1<numb2 && numb7<numb8) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+else if (numb1 % 2 !==0 && numb2 % 2 !==0 && numb3 % 2 ==0 &&numb4 % 2 ==0 && numb5 % 2 ==0 && numb6 % 2 !== 0 && numb7 % 2 !==0) { if (numb1<numb2 && numb6<numb7) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+else if (numb1 % 2 !==0 && numb2 % 2 !==0 && numb3 % 2 ==0 &&numb4 % 2 ==0 && numb5 % 2 !==0 && numb6 % 2 !== 0) { if (numb1<numb2 && numb5<numb6) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+else if (numb2 % 2 !==0 && numb3 % 2 !==0 && numb4 % 2 ==0 &&numb5 % 2 ==0 && numb6 % 2 ==0 && numb7 % 2 !==0 && numb8 % 2 !== 0) { if (numb2<numb3 && numb7<numb8) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+else if (numb3 % 2 !==0 && numb4 % 2 !==0 && numb5 % 2 ==0 &&numb6 % 2 ==0 && numb7 % 2 !==0 && numb8 % 2 !== 0) { if (numb3<numb4 && numb7<numb8) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+else if (numb1 % 2 !==0 && numb2 % 2 !==0 && numb3 % 2 !==0 &&numb4 % 2 !==0 && numb5 % 2 ==0 && numb6 % 2 !== 0 && numb7 % 2 !==0 && numb8 % 2 !== 0) { if (numb1<numb2 && numb6<numb7) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+//Выбрана левая крайняя пара цифр для дальнейшей логики
+
+else if (numb1 % 2 !==0 && numb2 % 2 !==0 && numb3 % 2 !==0 &&numb4 % 2 !==0 && numb5 % 2 !==0 && numb6 % 2 == 0 && numb7 % 2 !==0 && numb8 % 2 !== 0) { if ((numb4<numb5 || numb1<numb2 || numb2<numb3 || numb3<numb4) && numb7<numb8) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+//Слева пары цифр участвуют в логике в разных комбинациях
+
+else if (numb1 % 2 !==0 && numb2 % 2 !==0 && numb3 % 2 ==0 &&numb4 % 2 !==0 && numb5 % 2 !==0 && numb6 % 2 !== 0 && numb7 % 2 !==0 && numb8 % 2 !== 0) { if (numb1<numb2 && (numb4<numb5 || numb5<numb6 || numb6<numb7 || numb7<numb8)) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+//Справа пары цифр участвуют в логике в разных комбинациях
+
+else if (numb1 % 2 !==0 && numb2 % 2 !==0 && numb3 % 2 !==0 &&numb4 % 2 ==0 && numb5 % 2 ==0 && numb6 % 2 !== 0 && numb7 % 2 !==0 && numb8 % 2 !== 0) { if (numb1<numb2 && numb6<numb7) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+else if (numb1 % 2 !==0 && numb2 % 2 !==0 && numb3 % 2 !==0 &&numb4 % 2 ==0 && numb5 % 2 !==0 && numb6 % 2 !== 0 && numb7 % 2 !==0 && numb8 % 2 !== 0) { if (numb2<numb3 && numb7<numb8) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+else if (numb1 % 2 !==0 && numb2 % 2 !==0 && numb3 % 2 ==0 &&numb4 % 2 ==0 && numb5 % 2 !==0 && numb6 % 2 !== 0 && numb7 % 2 !==0 && numb8 % 2 !== 0) { if (numb1<numb2 && numb5<numb6) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+else if (numb1 % 2 !==0 && numb2 % 2 !==0 && numb3 % 2 !==0 &&numb4 % 2 !==0 && numb5 % 2 ==0 && numb6 % 2 == 0 && numb7 % 2 !==0 && numb8 % 2 !== 0) { if (numb3<numb4 && numb7<numb8) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+else if (numb1 % 2 !==0 && numb2 % 2 !==0 && numb3 % 2 ==0 &&numb4 % 2 ==0 && numb5 % 2 ==0 && numb6 % 2 !== 0 && numb7 % 2 !==0 && numb8 % 2 !== 0) { if (numb1<numb2 && numb6<numb7) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+else if (numb1 % 2 !==0 && numb2 % 2 !==0 && numb3 % 2 !==0 &&numb4 % 2 ==0 && numb5 % 2 ==0 && numb6 % 2 == 0 && numb7 % 2 !==0 && numb8 % 2 !== 0) { if (numb2<numb3 && numb7<numb8) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+else if (numb1 % 2 !==0 && numb2 % 2 !==0 && (numb3 % 2 ==0 ||numb4 % 2 ==0 || numb5 % 2 ==0 || numb6 % 2 == 0) && numb7 % 2 !==0 && numb8 % 2 !== 0) { if (numb1<numb2 && numb7<numb8) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+else if (numb1 % 2 !==0 && numb2 % 2 !==0 && numb3 % 2 !==0 && (numb4 % 2 ==0 || numb5 % 2 ==0 || numb6 % 2 == 0) && numb7 % 2 !==0 && numb8 % 2 !== 0) { if (numb1<numb2 && numb7<numb8) {console.log("Промокод 2000 грн");} else {
+	console.log("Промокод 1000 грн");}
+}
+else  { if (num1 > num2) {
+		console.log("Промокод: 100 грн");
+} else {
+	console.log("Промокод недействителен");
+}
+}
+		</script>
+	</body>
+</html>
